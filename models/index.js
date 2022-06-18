@@ -10,5 +10,4 @@ Blog.belongsTo(User, {
     foreignKey: 'user_id'
 })
 
-module.exports = Blog
-module.exports = User
+module.exports = { Blog, User };

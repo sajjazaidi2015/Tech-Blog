@@ -1,0 +1,39 @@
+{{!-- {{#each blogs as |blog|}}
+<!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+<div class="dish col-md-5">
+    <!-- We use dish.id instead of <od> and <li> elements. -->
+    <p>
+        {{blog.title}}
+    </p>
+    <p>
+        {{blog.content}}
+    </p>
+    <p>
+        {{blog.user.name}}
+    </p>
+    <p>
+        {{blog.date_created}}
+    </p>
+</div> 
+<!-- Below, we close the #each helper. -->
+{{/each}} --}}
+
+{{#each blogs as |blog|}}
+<div class="posts">
+  
+  <div class="card">
+  <div class="card-header">
+    {{blog.title}}
+    <p>Posted by {{blog.user.name}} on {{blog.date_created}}</p>
+  </div>
+  <div class="card-body">
+    <span class="blockquote mb-0">
+      <p>{{blog.content}}</p>
+      
+      
+    </span>
+  </div>
+</div>
+  
+</div>
+{{/each}}
