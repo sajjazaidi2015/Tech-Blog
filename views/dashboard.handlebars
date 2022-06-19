@@ -1,1 +1,22 @@
-<h1>dashboard</h1>
+<h1>Dashboard</h1>
+{{#each blogs as |blog|}}
+<div class="posts dashboard">
+    <a href="/post/{{blog.id}}">
+        <div class="card mt-3">
+            <div class="card-header">
+                {{blog.title}}
+                <p>Posted by {{blog.user.name}} on {{blog.date_created}}</p>
+            </div>
+            <div class="card-body">
+                <span class="blockquote mb-0">
+                    <p>{{blog.content}}</p>
+                </span>
+            </div>
+        </div>
+    </a>
+</div>
+{{/each}}
+
+<div class="mt-3">
+    <button id="add-post" type="submit" class="btn btn-primary">New Post</button>
+</div>

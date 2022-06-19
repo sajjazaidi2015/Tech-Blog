@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
-app.use(require('./controllers/routes/user-routes'))
+app.use(require('./controllers/routes/routes'))
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
